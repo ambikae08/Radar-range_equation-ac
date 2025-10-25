@@ -90,6 +90,7 @@ plot(Pm1, Rmax3, 'g');
 ```
 
 ## Output
+![WhatsApp Image 2025-10-23 at 08 33 00_1257ea6b](https://github.com/user-attachments/assets/cac74921-8f2b-4744-a08e-ceddf689c90e)
 
 
 
