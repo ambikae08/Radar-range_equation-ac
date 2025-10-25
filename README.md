@@ -1,4 +1,3 @@
-# Radar-range_equation-ac
 # Evaluation of Radar Range Using Scilab
 ---
 
