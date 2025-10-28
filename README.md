@@ -97,7 +97,7 @@ plot(Pm1, Rmax3, 'g');
 
 ## Manual Calculation
 
-![Uploading WhatsApp Image 2025-10-28 at 22.35.25_5e3eda8a.jpg…]()
+![WhatsApp Image 2025-10-28 at 22 35 25_5e3eda8a](https://github.com/user-attachments/assets/f0c6abf9-969d-4228-ab67-5fd544f0eb8b)
 
 
 
