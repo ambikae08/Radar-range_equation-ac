@@ -12,7 +12,8 @@ The **Radar Range Equation** is a key relationship used in radar system design t
 It is expressed as:
 
 
-<img width="716" height="615" alt="image" src="https://github.com/user-attachments/assets/76750523-628c-4a31-8ce2-bba25c1bbee8" />
+<img width="965" height="329" alt="image" src="https://github.com/user-attachments/assets/227b36f2-c236-490e-96e2-2efd8f6bb89e" />
+
 
 ---
 ## Algorithm: Radar Range Calculation and Plotting
@@ -56,33 +57,38 @@ It is expressed as:
 clc;
 clear;
 close;
+
 Gr = 400;           
-l = 0.025;          
-sigma = 25;   
-      
-Pm= 1e-12;       
-Gt = 4000;         
-Pt = 0:1:10;  
-Rmax1 = ((Pt .* Gt .* Gr .* l^2 .* sigma) ./ ((4*%pi)^2 .* Pm)).^(1/4);
+l = 0.025;           
+sigma = 25;       
+Pm = 1e-12;       
+Gt = 4000;        
+Pt = 0:1:10;      
+
+Rmax1 = ((Pt .* (Gt.^2) .* l^2 .* sigma) ./ ((4*%pi)^3 .* Pm)).^(1/4);
 
 Gt1 = 100:100:10000; 
-Pt1 = 10;           
- 
-Rmax2 = ((Pt1 .* Gt1 .* Gr .* l^2 .* sigma) ./ ((4*%pi)^2 .* Pm)).^(1/4);
+Pt1 = 10;
+
+Rmax2 = ((Pt1 .* (Gt1.^2) .* l^2 .* sigma) ./ ((4*%pi)^3 .* Pm)).^(1/4);
 
 Pm1 = logspace(-15, -9, 100); 
-Pt2 = 10;                       
-Gt2 = 4000;  
-                   
-Rmax3 = ((Pt2 .* Gt2 .* Gr .* l^2 .* sigma) ./ ((4*%pi)^2 .* Pm1)).^(1/4);
+Pt2 = 10;
+Gt2 = 4000;
+
+Rmax3 = ((Pt2 .* (Gt2.^2) .* l^2 .* sigma) ./ ((4*%pi)^3 .* Pm1)).^(1/4);
+
 subplot(3,1,1);
 plot(Pt, Rmax1, 'r');
+title("Rmax vs Transmitted Power");
 
 subplot(3,1,2);
 plot(Gt1, Rmax2, 'b');
+title("Rmax vs Transmitter Gain");
 
 subplot(3,1,3);
 plot(Pm1, Rmax3, 'g');
+title("Rmax vs Minimum Detectable Power");
 
 
 
@@ -90,15 +96,13 @@ plot(Pm1, Rmax3, 'g');
 ```
 
 ## Output
-![WhatsApp Image 2025-10-23 at 08 33 00_1257ea6b](https://github.com/user-attachments/assets/cac74921-8f2b-4744-a08e-ceddf689c90e)
+<img width="757" height="720" alt="image" src="https://github.com/user-attachments/assets/9caeb51f-ea33-4ac4-a448-84e7dd8755cc" />
+
 
 
 
 
 ## Manual Calculation
-
-![WhatsApp Image 2025-10-28 at 22 35 25_5e3eda8a](https://github.com/user-attachments/assets/f0c6abf9-969d-4228-ab67-5fd544f0eb8b)
-
 
 
 
