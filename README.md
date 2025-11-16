@@ -58,25 +58,25 @@ clc;
 clear;
 close;
 
-Gr = 400;           
-l = 0.025;           
-sigma = 25;       
-Pm = 1e-12;       
-Gt = 4000;        
-Pt = 0:1:10;      
+lambda = 0.025;        
+sigma  = 25;           
+Pm     = 1e-12;        
+Gt     = 4000;         
+Pt     = 0:1:10;       
 
-Rmax1 = ((Pt .* (Gt.^2) .* l^2 .* sigma) ./ ((4*%pi)^3 .* Pm)).^(1/4);
+Rmax1 = ((Pt .* (Gt.^2) .* lambda^2 .* sigma) ./ ((4*%pi)^3 .* Pm)).^(1/4);
 
 Gt1 = 100:100:10000; 
 Pt1 = 10;
 
-Rmax2 = ((Pt1 .* (Gt1.^2) .* l^2 .* sigma) ./ ((4*%pi)^3 .* Pm)).^(1/4);
+Rmax2 = ((Pt1 .* (Gt1.^2) .* lambda^2 .* sigma) ./ ((4*%pi)^3 .* Pm)).^(1/4);
+
 
 Pm1 = logspace(-15, -9, 100); 
 Pt2 = 10;
 Gt2 = 4000;
 
-Rmax3 = ((Pt2 .* (Gt2.^2) .* l^2 .* sigma) ./ ((4*%pi)^3 .* Pm1)).^(1/4);
+Rmax3 = ((Pt2 .* (Gt2.^2) .* lambda^2 .* sigma) ./ ((4*%pi)^3 .* Pm1)).^(1/4);
 
 subplot(3,1,1);
 plot(Pt, Rmax1, 'r');
@@ -92,11 +92,11 @@ title("Rmax vs Minimum Detectable Power");
 
 
 
-
 ```
 
 ## Output
-<img width="757" height="720" alt="image" src="https://github.com/user-attachments/assets/9caeb51f-ea33-4ac4-a448-84e7dd8755cc" />
+<img width="756" height="713" alt="image" src="https://github.com/user-attachments/assets/410d01e1-3b15-4568-a2fd-08502c6739c0" />
+
 
 
 
