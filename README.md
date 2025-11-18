@@ -95,14 +95,13 @@ title("Rmax vs Minimum Detectable Power");
 ```
 
 ## Output
+
 <img width="756" height="713" alt="image" src="https://github.com/user-attachments/assets/410d01e1-3b15-4568-a2fd-08502c6739c0" />
 
-
-
-
-
-
 ## Manual Calculation
+
+
+<img width="285" height="342" alt="image" src="https://github.com/user-attachments/assets/5fa73e0a-4620-4068-b6fb-58b00f447ee8" />
 
 
 
